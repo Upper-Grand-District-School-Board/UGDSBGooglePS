@@ -9,7 +9,7 @@ function Enable-Chromebook{
   }  
   # Confirm we have a valid access token
   if(-not $(Test-GoogleAccessToken)){
-    Get-GoogleAccessToken -json $global:googleJSON -customerId $global:googleCustomerId
+    Get-GoogleAccessToken -private_key $global:googlePK -client_email $global:googleClientEmail -customerid  $global:googleCustomerId -scopes $global:googleScopes
   }  
   # Generate the final API endppoint URI
   $endpoint = "admin/directory/v1/customer/$($global:googleCustomerId)/devices/chromeos/$($deviceID)/action"

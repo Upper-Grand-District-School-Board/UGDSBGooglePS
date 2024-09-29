@@ -37,4 +37,7 @@ function Get-GoogleAccessToken{
   $token = Invoke-WebRequest @tokenVars
   $global:googleAccessToken = ($token.content | ConvertFrom-JSON).access_token
   $global:googleCustomerId = $customerId
+  $global:googleClientEmail = $googleClientEmail
+  $global:googlePK = $private_key
+  $global:googleScopes = $scopes
 }

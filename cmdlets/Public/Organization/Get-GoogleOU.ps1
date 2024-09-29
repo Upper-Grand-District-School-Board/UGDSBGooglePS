@@ -11,7 +11,7 @@ function Get-GoogleOU{
   }
   # Confirm we have a valid access token
   if(-not $(Test-GoogleAccessToken)){
-    Get-GoogleAccessToken -json $global:googleJSON -customerId $global:googleCustomerId
+    Get-GoogleAccessToken -private_key $global:googlePK -client_email $global:googleClientEmail -customerid  $global:googleCustomerId -scopes $global:googleScopes
   }
   $endpoint = "admin/directory/v1/customer/$($global:googleCustomerId)/orgunits"
   $uriparts = [System.Collections.Generic.List[PSCustomObject]]@()

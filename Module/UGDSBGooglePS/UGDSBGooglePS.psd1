@@ -68,7 +68,7 @@
     
     # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
     #FunctionsToExport = @()
-    FunctionsToExport = @('Disable-Chromebook','Enable-Chromebook','Get-ChromeDevices','Get-GoogleAccessToken','Get-GoogleAPI','Get-GoogleOU','Test-GoogleAccessToken')
+    FunctionsToExport = @('Disable-Chromebook','Disable-GoogleUser','Enable-Chromebook','Enable-GoogleUser','Get-ChromeDevices','Get-GoogleAccessToken','Get-GoogleAPI','Get-GoogleOU','Get-GoogleUser','Test-GoogleAccessToken')
     
     # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
     CmdletsToExport = @()
